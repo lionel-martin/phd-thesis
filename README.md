@@ -46,7 +46,7 @@ Experimental content
 * Figure 4.6
 * Table 4.1
 * Table 4.2
-* Table 4.3
+* [Table 4.3](./experiments/chapter4/experiment_filter_power.m)
 * Table 4.4
 * Table 4.5
 * Table 4.6
