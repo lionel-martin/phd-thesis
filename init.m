@@ -2,7 +2,4 @@
 
 gsp_start;
 
-addpath(genpath('algorithms'));
-addpath(genpath('experiments'));
-addpath(genpath('graph-measures'));
-addpath(genpath('third_party'));
+addpath(genpath('.'));

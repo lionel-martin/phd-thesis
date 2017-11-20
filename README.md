@@ -7,6 +7,7 @@ Requirements
 
 All the experiments assume the possession of the following toolboxes:
 * [GSPBox](https://github.com/epfl-lts2/gspbox)
+* [Johan Paratte's thesis repo](https://github.com/jparatte/thesis), for the datasets
 * [CBR Selector](https://github.com/DevinCharles/cbrSelector), optionnal
 * [Export Fig](https://github.com/altmany/export_fig), optional
 
@@ -52,17 +53,12 @@ Experimental content
 
 ### Chapter 5 - Filter Localization for Graph Clustering
 
-* Figure 5.1 exp1_sensor_heat.m
-* Figure 5.2 exp2_example_diffusion_from_centroids.m
-* Figure 5.3 exp4_lowpass_norm_tig.m
-* Figure 5.4 exp5_limits_norm_tig.m
-* Figure 5.5
-* Table 5.1 exp3_centers_from_medoids.m
-* Table 5.2
-* Table 5.3
-* Table 5.4
-* Table 5.5
-* Table 5.6
-* Table 5.7
-* Table 5.8
-* Table 5.9
+* [Figure 5.1](./experiments/chapter5/exp1_sensor_heat.m)
+* [Figure 5.2](./experiments/chapter5/exp2_example_diffusion_from_centroids.m)
+* [Figure 5.3](./experiments/chapter5/exp4_lowpass_norm_tig.m)
+* [Figure 5.4](./experiments/chapter5/exp5_limits_norm_tig.m)
+* [Figure 5.5](./experiments/chapter5/exp7_SBM_quality.m)
+* [Table 5.1](./experiments/chapter5/exp3_centers_from_medoids.m)
+* [Table 5.2](./experiments/chapter5/exp6_scaling_n.m)
+* [Table 5.3](./experiments/chapter5/exp8_mnist.m)
+* [Tables 5.4 - 5.9](./experiments/chapter5/exp9_synthetic.m)
