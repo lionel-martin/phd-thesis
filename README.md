@@ -38,18 +38,18 @@ Experimental content
 
 ### Chapter 4 - Approaching Laplacian Eigenspaces with Random Signals
 
-* Figure 4.1
-* Figure 4.2
-* Figure 4.3
-* Figure 4.4
-* Figure 4.5
-* Figure 4.6
-* Table 4.1
-* Table 4.2
-* [Table 4.3](./experiments/chapter4/experiment_filter_power.m)
-* Table 4.4
-* Table 4.5
-* Table 4.6
+* [Figure 4.1](./experiments/chapter4/experiment_second_eigenvector.m)
+* [Figure 4.2](./experiments/chapter4/experiment_filter_power.m)
+* [Figure 4.3](./experiments/chapter4/experiment_eigest_timing.m)
+* [Figure 4.4](./experiments/chapter4/experiment_clustering_SBM.m)
+* [Figure 4.5](./experiments/chapter4/experiment_viz_small.m)
+* [Figure 4.6](./experiments/chapter4/experiment_viz_large.m)
+* [Table 4.1](./experiments/chapter4/various_graphs_proj.m)
+* [Table 4.2](./experiments/chapter4/experiment_filter_approx.m)
+* [Table 4.3](./experiments/chapter4/various_graphs_proj.m)
+* [Table 4.4](./experiments/chapter4/experiment_amazon_clustering.m)
+* [Table 4.5](./experiments/chapter4/experiment_amazon_clustering.m)
+* [Table 4.6](./experiments/chapter4/experiment_viz_large.m)
 
 ### Chapter 5 - Filter Localization for Graph Clustering
 

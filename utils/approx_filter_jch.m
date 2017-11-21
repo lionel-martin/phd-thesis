@@ -20,7 +20,7 @@ function [ graph_filter ] = approx_filter_jch(G, lk, m, param)
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 % If you use this code please kindly cite
-%     Paratte, Johan, and Lionel Martin. 
+%     Paratte, Johan and Martin, Lionel. 
 %     "Fast Eigenspace Approximation using Random Signals."
 %     arXiv preprint arXiv:1611.00938 (2016).
 % https://arxiv.org/abs/1611.00938

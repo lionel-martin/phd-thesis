@@ -1,5 +1,9 @@
-%EXPERIMENT_FILTER_POWER Script for the experiment on filter power
-
+%EXPERIMENT_FILTER_POWER Script for the experiment on filter power (Figure 4.2)
+%
+% Added the comparison with Allen-Zhu approximation in my thesis.
+% Modified by Lionel Martin
+% Original work Johan Paratte and Lionel Martin
+%
 % Copyright (C) 2016 Johan Paratte, Lionel Martin.
 % This file is part of the Reproducible Research code base for the Fast
 % Eigenspace Approximation using Random Signals (FEARS) method.
@@ -23,62 +27,71 @@
 %     arXiv preprint arXiv:1611.00938 (2016).
 % https://arxiv.org/abs/1611.00938
 
-%% Init
-
-gsp_start;
-
 %% Study the effect of the polynomial power on the approximation
 
 N = 500;
+k = 150;
 
 G = gsp_sensor(N);
-G = gsp_estimate_lmax(G);
 G = gsp_compute_fourier_basis(G);
-Uk = G.U(:,1:k);
 
+lk = (G.e(k) + G.e(k+1)) / 2;
+h = @(x) x < lk; % ideal low-pass
 
 %% Cheby vs Jackson-Cheby
-m = 25;
-k = 90;
-lk = G.e(k);
-%%
+m = 250;
 
-figure;
+figure; hold on;
 paramplot.plot_eigenvalues = 1;
 paramplot.cla = 0;
-h = @(x) x < lk;
 gsp_plot_filter(G, h, paramplot);
 
 
 paramplot.plot_eigenvalues = 0; %avoid redrawing eigenvalues
+
 cheby_approx = gsp_approx_filter(G, h, m);
-hold on;
 gsp_plot_filter(G, cheby_approx, paramplot);
 
 jch_approx = approx_filter_jch(G, lk, m);
-hold on;
 gsp_plot_filter(G, jch_approx, paramplot);
+
+az_param = struct('order', m, 'kap', 1e-4);
+az_approx = approx_filter_allenzhu(G, lk, m, az_param);
+gsp_plot_filter(G, az_approx, paramplot);
 
 hold off;
 
 
 %% Jackson-Cheby increasing m
-k = 90;
-lk = G.e(k);
-
 ms = [50, 100, 200, 400];
 
 figure; hold on;
 paramplot.plot_eigenvalues = 1;
 paramplot.cla = 0;
 
-h = @(x) x < lk;
 gsp_plot_filter(G, h, paramplot);
+paramplot.plot_eigenvalues = 0;
 
 for m = ms
     jch_approx = approx_filter_jch(G, lk, m);
-    az_approx = approx_filter_allenzhu(G, lk, m);
     gsp_plot_filter(G, jch_approx, paramplot);
-    gsp_plot_filter(G, az_approx, paramplot);
 
+end
+
+%% Allen-Zhu increasing m
+ms = [50, 100, 200, 400];
+kaps = [1e-2, 1e-3, 1e-3, 1e-4];
+
+figure; hold on;
+paramplot.plot_eigenvalues = 1;
+paramplot.cla = 0;
+
+gsp_plot_filter(G, h, paramplot);
+paramplot.plot_eigenvalues = 0;
+
+for ii = 1:numel(ms)
+    m = ms(ii);
+    az_param = struct('order', m, 'kap', kaps(ii));
+    az_approx = approx_filter_allenzhu(G, lk, m, az_param);
+    gsp_plot_filter(G, az_approx, paramplot);
 end
