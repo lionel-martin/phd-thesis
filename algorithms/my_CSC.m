@@ -155,7 +155,7 @@ if param_CSC.assignment == 1
 
     fprintf('Low-dimensional kmeans...')
     tic; 
-    IDX_LD = kmeans(X_lk_est_DS , G.k, 'Replicates', 100, 'Options', setstats('useParallel', 1));
+    IDX_LD = kmeans(X_lk_est_DS , G.k, 'Replicates', 100, 'Options', setstats('UseParallel', 1));
     time.k_means_low_dim=toc;
     fprintf('\t\tDone.\n')
 

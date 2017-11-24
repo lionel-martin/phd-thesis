@@ -26,15 +26,15 @@ Experimental content
 
 ### Chapter 3 - Fast Approximation of Spectral Clustering for Dynamic Networks
 
-* Figure 3.1
-* Figure 3.2
-* Figure 3.3
-* Figure 3.4
-* Figure 3.5
-* Figure 3.6
-* Figure 3.7
-* Figure 3.8
-* Table 3.1
+* [Figure 3.1](./experiments/chapter3/
+* [Figure 3.2](./experiments/chapter3/
+* [Figure 3.3](./experiments/chapter3/
+* [Figure 3.4](./experiments/chapter3/
+* [Figure 3.5](./experiments/chapter3/
+* [Figure 3.6](./experiments/chapter3/
+* [Figure 3.7](./experiments/chapter3/
+* [Figure 3.8](./experiments/chapter3/
+* [Table 3.1](./experiments/chapter3/
 
 ### Chapter 4 - Approaching Laplacian Eigenspaces with Random Signals
 
